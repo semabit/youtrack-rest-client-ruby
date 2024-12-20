@@ -26,6 +26,11 @@ module Youtrack
         post_resource_with_fields(model.all_fields, PATHS.issues, issue)
       end
 
+      # @param issue either a hash, json string or Issue instance
+      def update(id, issue)
+        post_resource_with_fields(model.all_fields, PATHS.issue % { id: id }, issue)
+      end
+
       # @param issues either a list of ids or a list of Issue instances
       def command(command, issues = [])
         issues = issues.map { |item| { id: item.respond_to?("id") ? item.id : item } }

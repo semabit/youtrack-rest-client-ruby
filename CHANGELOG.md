@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+- add update method to issues
+
 #### v1.0.1
 
 - fix issue with zeitwerk/gem loading
